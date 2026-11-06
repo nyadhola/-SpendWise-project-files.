@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise - Financial Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>Spend<span>Wise</span></h2>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Transactions</a>
+                <a href="#">Budgets</a>
+                <a href="#">Analytics</a>
+                <a href="#">Settings</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>Dashboard Overview</h1>
+                    <p>Welcome back! Here is your financial summary.</p>
+                </div>
+                <div class="user-profile">
+                    <span class="avatar">JS</span>
+                    <span class="username">John Student</span>
+                </div>
+            </header>
+
+            <!-- Metrics Cards Grid -->
+            <section class="metrics-grid">
+                <div class="card metric-card">
+                    <h3>Total Balance</h3>
+                    <p class="amount" id="total-balance">$12,450.80</p>
+                    <span class="trend positive">+ 8.4% this month</span>
+                </div>
+                <div class="card metric-card">
+                    <h3>Monthly Income</h3>
+                    <p class="amount income" id="monthly-income">$4,850.00</p>
+                    <span class="trend">Stable</span>
+                </div>
+                <div class="card metric-card">
+                    <h3>Monthly Expenses</h3>
+                    <p class="amount expense" id="monthly-expenses">$1,620.40</p>
+                    <span class="trend negative">- 3.2% vs last month</span>
+                </div>
+            </section>
+
+            <!-- Dashboard Split View -->
+            <section class="dashboard-split">
+                <!-- Transaction History -->
+                <div class="card table-card">
+                    <div class="card-header">
+                        <h2>Recent Transactions</h2>
+                        <button class="btn-primary" id="add-transaction-btn">+ Add Transaction</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transaction-list">
+                                <tr>
+                                    <td>Grocery Store</td>
+                                    <td>Food & Groceries</td>
+                                    <td>Nov 05, 2026</td>
+                                    <td class="expense">-$84.50</td>
+                                </tr>
+                                <tr>
+                                    <td>Freelance Client</td>
+                                    <td>Income</td>
+                                    <td>Nov 03, 2026</td>
+                                    <td class="income">+$1,200.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Electric Utility</td>
+                                    <td>Bills & Utilities</td>
+                                    <td>Nov 01, 2026</td>
+                                    <td class="expense">-$95.20</td>
+                                </tr>
+                                <tr>
+                                    <td>Coffee Shop</td>
+                                    <td>Dining Out</td>
+                                    <td>Oct 30, 2026</td>
+                                    <td class="expense">-$4.75</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Budget Progress -->
+                <div class="card budget-card">
+                    <h2>Budget Allocation</h2>
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span>Housing & Rent</span>
+                            <span>$1,200 / $1,200</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span>Food & Groceries</span>
+                            <span>$350 / $500</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill warning" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span>Entertainment</span>
+                            <span>$120 / $250</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 48%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
